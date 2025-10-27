@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Random Sad Reaction</title>
+<script>
+  const folder = "reaction/sad/";
+  const images = [
+    "570fb705677273ae6700c4207a7891d9.jpg",
+    "5c3a25528af246ad9acbbb679a2c376d.jpg",
+    "907b5037732a7670b55e5027c83cf519.jpg",
+    "e09bf62bbaac2e101ff4c6e5efd6fbff.jpg"
+  ];
+  const random = images[Math.floor(Math.random() * images.length)];
+  window.location.href = folder + random;
+</script>
+</head>
+<body>
+  <p>Loading random image (sad)...</p>
+</body>
+</html>
