@@ -4,22 +4,36 @@
 <meta charset="UTF-8" />
 <title>POPko Random Reaction</title>
 <script>
-  // 👇 รายชื่อภาพทั้งหมดใน repo
-  const images = [
+// 🔹 รวมทุกหมวดที่มี
+const categories = {
+  "reaction/huh/": [
     "197be49c5a9e2eb4bee89b8d1991270.jpg",
     "1bdfd54d4feb99604ed13e623709e29e.jpg",
     "3a7e686ed7b94d57b22eda6a224bb5e0f.jpg",
     "f6cb1dd8b8bc64dffd1deeac64a597fe.jpg"
-  ];
+  ],
+  "reaction/sad/": [
+    "570fb705677273ae6700c4207a7891d9.jpg",
+    "5c3a25528af246ad9acbbb679a2c376d.jpg",
+    "907b5037732a7670b55e5027c83cf519.jpg",
+    "e09bf62bbaac2e101ff4c6e5efd6fbff.jpg"
+  ]
+};
 
-  // สุ่มหนึ่งภาพจากรายการ
-  const random = images[Math.floor(Math.random() * images.length)];
+// 🔹 รวมไฟล์ทั้งหมดจากทุกหมวด
+let allImages = [];
+for (const [folder, files] of Object.entries(categories)) {
+  files.forEach(file => allImages.push(folder + file));
+}
 
-  // redirect ไปยังภาพนั้นโดยตรง
-  window.location.href = random;
+// 🔹 สุ่มภาพจากทั้งหมด
+const randomImage = allImages[Math.floor(Math.random() * allImages.length)];
+
+// 🔹 redirect ไปยังภาพสุ่ม
+window.location.href = randomImage;
 </script>
 </head>
 <body>
-  <p>Redirecting to random image...</p>
+  <p>Redirecting to random reaction...</p>
 </body>
 </html>
