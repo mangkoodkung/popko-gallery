@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>POPko Random Reaction</title>
+<script>
+  // 👇 รายชื่อภาพทั้งหมดใน repo
+  const images = [
+    "197be49c5a9e2eb4bee89b8d1991270.jpg",
+    "1bdfd54d4feb99604ed13e623709e29e.jpg",
+    "3a7e686ed7b94d57b22eda6a224bb5e0f.jpg",
+    "f6cb1dd8b8bc64dffd1deeac64a597fe.jpg"
+  ];
+
+  // สุ่มหนึ่งภาพจากรายการ
+  const random = images[Math.floor(Math.random() * images.length)];
+
+  // redirect ไปยังภาพนั้นโดยตรง
+  window.location.href = random;
+</script>
+</head>
+<body>
+  <p>Redirecting to random image...</p>
+</body>
+</html>
