@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Random Huh Reaction</title>
+<script>
+  // โฟลเดอร์และไฟล์ภาพในหมวด huh
+  const folder = "reaction/huh/";
+  const images = [
+    "197be49c5a9e2eb4bee89b8d1991270.jpg",
+    "1bdfd54d4feb99604ed13e623709e29e.jpg",
+    "3a7e686ed7b94d57b22eda6a224bb5e0f.jpg"
+  ];
+  const random = images[Math.floor(Math.random() * images.length)];
+  window.location.href = folder + random;
+</script>
+</head>
+<body>
+  <p>Loading random image (huh)...</p>
+</body>
+</html>
